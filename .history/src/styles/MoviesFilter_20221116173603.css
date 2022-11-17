@@ -1,0 +1,15 @@
+.movie_search input {
+  text-align: left;
+  margin: 2em 0em 0em 2em;
+}
+
+input {
+  border: solid red 0.3em;
+  border-radius: 2em;
+  background-color: #0000;
+}
+
+input::placeholder {
+  color: red;
+  font-size: 2em;
+}

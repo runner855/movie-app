@@ -1,0 +1,33 @@
+ul {
+  text-align: left;
+  list-style: none;
+  font-size: 1.5em;
+  display: flex;
+}
+ul li {
+  margin-right: 20px;
+  color: #cc2e25;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.navbar {
+  margin: 2em 0em 0em 2em;
+}
+a:hover {
+  border-bottom: solid 3px #cc2e25;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+}

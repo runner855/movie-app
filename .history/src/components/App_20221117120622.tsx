@@ -1,0 +1,49 @@
+import React from "react";
+import "../styles/App.css";
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  Router,
+  Routes,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import { NavBar } from "../components/NavBar";
+import { TopRated } from "../components/TopRated";
+import { Upcoming } from "./Upcoming";
+import { Popular } from "./Popular";
+import { MoviesFilter } from "./MoviesFilter";
+
+export const App = () => {
+  return (
+    <div className="App">
+      <div className="title">Movies App</div>
+
+      <NavBar />
+      <MoviesFilter />
+      const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>Hello World</h1>
+        <Link to="about">About Us</Link>
+      </div>
+    ),
+  },
+  {
+    path: "about",
+    element: <div>About</div>,
+  },
+]);
+
+<RouterProvider router={router} />
+
+    
+    </div>
+  );
+};
+
+
+
