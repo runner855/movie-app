@@ -1,0 +1,22 @@
+img {
+  width: 16em;
+  height: 20em;
+  border-radius: 1em;
+  margin: 2em;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie-title {
+  font-size: 1.4em;
+  margin: 1em;
+  line-break: normal;
+}

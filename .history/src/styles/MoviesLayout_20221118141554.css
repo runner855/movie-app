@@ -1,0 +1,26 @@
+img {
+  width: 16em;
+  height: 20em;
+  border-radius: 1em;
+  margin: 2em;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie-title {
+  font-size: 1.4em;
+  overflow-wrap: break-word;
+}
+
+.rendered-movies {
+  inline-size: 150px;
+  overflow-wrap: break-word;
+}

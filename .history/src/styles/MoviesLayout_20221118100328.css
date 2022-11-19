@@ -1,0 +1,17 @@
+img {
+  width: 16em;
+  height: 20em;
+  border-radius: 1em;
+  margin: 2em;
+}
+
+img:hover {
+  border: solid 0.2em red;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
