@@ -23,7 +23,7 @@ img:hover {
 }
 
 .rendered-movies {
-  inline-size: 300px;
+  inline-size: 320px;
   overflow-wrap: break-word;
   text-align: center;
 }

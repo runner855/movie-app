@@ -20,10 +20,12 @@ img:hover {
   font-size: 1.4em;
   overflow-wrap: break-word;
   color: red;
+  inline-size: 390px;
+  overflow-wrap: break-word;
 }
 
 .rendered-movies {
-  inline-size: 300px;
+  inline-size: 390px;
   overflow-wrap: break-word;
   text-align: center;
 }
