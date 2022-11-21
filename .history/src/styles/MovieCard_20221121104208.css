@@ -92,9 +92,9 @@ body {
     width: 60%;
   }
 
-  /* .movie_desc {
+  .movie_desc {
     width: 50%;
-  } */
+  }
 
   .info_section {
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);

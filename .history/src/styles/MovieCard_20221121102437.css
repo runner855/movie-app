@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  background: white;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.movie_card {
+  position: relative;
+  display: block;
+  width: 800px;
+  height: 350px;
+  margin: 100px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+/* .movie_card:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+} */

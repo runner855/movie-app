@@ -51,7 +51,11 @@ export const MovieCard = () => {
               </span>
             </div>
             <div className="movie_desc">
-              <p className="text">{movieDetails.overview}</p>
+              <p className="text">
+                Set in a world where fantasy creatures live side by side with
+                humans. A human cop is forced to work with an Orc to find a
+                weapon everyone is prepared to kill for.
+              </p>
             </div>
           </div>
           <div

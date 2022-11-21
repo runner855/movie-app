@@ -72,6 +72,8 @@ body {
 .movie_card .info_section .movie_desc {
   padding: 70px;
   height: 50%;
+  float: left;
+  margin-bottom: 240px;
 }
 .movie_card .info_section .movie_desc .text {
   color: #cfd6e1;

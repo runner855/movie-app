@@ -51,15 +51,14 @@ export const MovieCard = () => {
               </span>
             </div>
             <div className="movie_desc">
-              <p className="text">{movieDetails.overview}</p>
+              <p className="text">
+                Set in a world where fantasy creatures live side by side with
+                humans. A human cop is forced to work with an Orc to find a
+                weapon everyone is prepared to kill for.
+              </p>
             </div>
           </div>
-          <div
-            className="blur_back bright_back"
-            style={{
-              backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`})`,
-            }}
-          ></div>
+          <div className="blur_back bright_back"></div>
         </div>
       )}
     </>

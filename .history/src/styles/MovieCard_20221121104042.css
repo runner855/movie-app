@@ -7,7 +7,7 @@
 html,
 body {
   margin: 0;
-  background: black;
+  background: white;
   font-family: "Montserrat", helvetica, arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -70,7 +70,7 @@ body {
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 .movie_card .info_section .movie_desc {
-  padding: 70px;
+  padding: 35px;
   height: 50%;
 }
 .movie_card .info_section .movie_desc .text {
@@ -92,9 +92,9 @@ body {
     width: 60%;
   }
 
-  /* .movie_desc {
+  .movie_desc {
     width: 50%;
-  } */
+  }
 
   .info_section {
     background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
