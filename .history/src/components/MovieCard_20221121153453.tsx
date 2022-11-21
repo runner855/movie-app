@@ -35,13 +35,13 @@ export const MovieCard = () => {
               <span className="language">
                 {movieDetails.original_language.toUpperCase()}
               </span>
-              <span className="ratings_avg">
+              <p className="ratings_avg">
                 {(
                   Math.round(
                     (movieDetails.vote_average + Number.EPSILON) * 100
                   ) / 100
                 ).toFixed(1)}
-              </span>
+              </p>
 
               <div className="Stars"></div>
             </div>

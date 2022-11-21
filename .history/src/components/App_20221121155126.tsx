@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
+  redirect,
 } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
 
@@ -19,7 +19,9 @@ export const App = () => {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/upcoming" />} />
+        <Route path="/">
+          <redirect to="/upcoming" />
+        </Route>
         <Route path="/:page" element={<MoviesContainer />} />
         <Route path="/MovieCard/:id" element={<MovieCard />} />
       </Routes>

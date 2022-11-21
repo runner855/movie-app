@@ -19,7 +19,7 @@ export const App = () => {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/upcoming" />} />
+        <Route path="/" element={<Redirect to="/upcoming" />} />
         <Route path="/:page" element={<MoviesContainer />} />
         <Route path="/MovieCard/:id" element={<MovieCard />} />
       </Routes>

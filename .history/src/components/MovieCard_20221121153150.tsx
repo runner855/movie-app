@@ -35,15 +35,18 @@ export const MovieCard = () => {
               <span className="language">
                 {movieDetails.original_language.toUpperCase()}
               </span>
-              <span className="ratings_avg">
+              <p className="ratings_avg">
                 {(
                   Math.round(
                     (movieDetails.vote_average + Number.EPSILON) * 100
                   ) / 100
                 ).toFixed(1)}
-              </span>
+              </p>
+              
 
-              <div className="Stars"></div>
+<div class="Stars" style="--rating: 2.3;" aria-label="Rating of this product is 2.3 out of 5.">
+
+
             </div>
             <div className="movie_desc">
               <p className="text">{movieDetails.overview}</p>

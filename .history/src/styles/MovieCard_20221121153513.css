@@ -50,14 +50,11 @@ body {
 }
 
 .movie_card .info_section .movie_header .ratings_avg {
-  display: inline-block;
-  margin-top: 10px;
-  color: #fff;
-  padding: 7px;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  margin-left: 1em;
-  background-color: green;
+  color: #9ac7fa;
+  font-weight: 600;
+  margin-top: 2em;
+  width: 200px;
+  height: 30px;
 }
 
 .movie_card .info_section .movie_header .language {
@@ -153,6 +150,35 @@ body {
 
 .bright_back {
   background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+}
+
+/* rating */
+
+:root {
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+
+  &::before {
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--star-background) var(--percent),
+      var(--star-color) var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 l body {
