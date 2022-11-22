@@ -1,16 +1,11 @@
 import React from "react";
 import "../styles/App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { NavBar } from "../components/NavBar";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { NavBar } from "../NavBar";
 
-import { MoviesContainer } from "./MoviesContainer";
+import { MoviesContainer } from "../MoviesContainer";
 
-import { MovieCard } from "./MovieCard";
+import { MovieCard } from "../MovieCard";
 
 export const App = () => {
   return (

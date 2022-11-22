@@ -1,9 +1,7 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/MoviesLayout.css";
-import { MovieCard } from "./MovieCard";
-import { Link } from "react-router-dom";
-import { MovieProps } from "../types/ApiTypes";
+import { MovieProps } from "../../types/ApiTypes";
 
 type MoviesLayoutProps = {
   movies: MovieProps[] | undefined;
