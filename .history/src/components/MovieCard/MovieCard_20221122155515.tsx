@@ -14,20 +14,17 @@ export const MovieCard = () => {
     (state) => state.moviesDetails.MoviesDetails
   );
 
+  console.log(movieDetails);
+
   useEffect(() => {
     params.id &&
       MoviesCall.get(
         `${params.id}?api_key=${process.env.REACT_APP_API_KEY}`,
         {}
       ).then((res) => {
-        console.log("details", res);
-        dispatch(getMoviesDetails(res.data));
+        dispatch(getMoviesDetails(res.data.results));
       });
   }, [dispatch, params]);
-
-  const averageVote =
-    movieDetails &&
-    (Math.round(movieDetails.vote_average * 100) / 100).toFixed(1);
 
   return (
     <>
@@ -46,7 +43,7 @@ export const MovieCard = () => {
                 {movieDetails.original_language.toUpperCase()}
               </span>
               <span className="ratings_avg">
-                {averageVote === "0.0" ? "0" : averageVote}
+                {(Math.round(movieDetails.vote_average * 100) / 100).toFixed(1)}
               </span>
 
               <div className="Stars"></div>

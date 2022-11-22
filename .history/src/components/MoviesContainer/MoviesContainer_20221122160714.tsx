@@ -22,9 +22,10 @@ export const MoviesContainer = () => {
         `${params.page}?api_key=${process.env.REACT_APP_API_KEY}`,
         {}
       ).then((res) => {
+        console.log("list", res);
         dispatch(getMovies(res.data.results));
       });
-  }, [dispatch, params]);
+  }, [params]);
 
   useEffect(() => {
     const filteredMovies =
@@ -46,3 +47,5 @@ export const MoviesContainer = () => {
     </>
   );
 };
+
+//const count = useAppSelector((state) => state.counter.value)

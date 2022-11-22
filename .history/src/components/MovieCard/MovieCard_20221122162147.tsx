@@ -25,9 +25,7 @@ export const MovieCard = () => {
       });
   }, [dispatch, params]);
 
-  const averageVote =
-    movieDetails &&
-    (Math.round(movieDetails.vote_average * 100) / 100).toFixed(1);
+  const averageVote = movieDetails && movieDetails.vote_average;
 
   return (
     <>
@@ -46,7 +44,7 @@ export const MovieCard = () => {
                 {movieDetails.original_language.toUpperCase()}
               </span>
               <span className="ratings_avg">
-                {averageVote === "0.0" ? "0" : averageVote}
+                {(Math.round(movieDetails.vote_average * 100) / 100).toFixed(1)}
               </span>
 
               <div className="Stars"></div>

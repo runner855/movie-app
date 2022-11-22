@@ -6,6 +6,7 @@ import { NavBar } from "../NavBar/NavBar";
 import { MoviesContainer } from "../MoviesContainer/MoviesContainer";
 
 import { MovieCard } from "../MovieCard/MovieCard";
+import { NavBar2 } from "../NavBar2/NavBar2";
 
 export const App = () => {
   return (

@@ -4,8 +4,8 @@ import { MovieProps } from "../../types/ApiTypes";
 import { useParams } from "react-router-dom";
 import { MoviesLayout } from "../MoviesLayout/MoviesLayout";
 import { MoviesFilter } from "../MoviesFilter/MoviesFilter";
-import { useAppDispatch, useAppSelector } from "../../hook/Store";
-import { getMovies } from "../../actions/MoviesList";
+import { useAppDispatch } from "../../hook/Store";
+import { getMovies } from "../../actions";
 
 export const MoviesContainer = () => {
   const [value, setValue] = useState<string>("");
@@ -14,14 +14,13 @@ export const MoviesContainer = () => {
   const params = useParams();
   const dispatch = useAppDispatch();
 
-  const movies = useAppSelector((state) => state.movies.MovieList);
-
   useEffect(() => {
     params.page &&
       MoviesCall.get(
         `${params.page}?api_key=${process.env.REACT_APP_API_KEY}`,
         {}
       ).then((res) => {
+        // setMovies(res.data.results);
         dispatch(getMovies(res.data.results));
       });
   }, [dispatch, params]);

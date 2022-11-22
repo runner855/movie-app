@@ -1,17 +1,17 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { MovieProps } from "../../types/ApiTypes";
+import { MovieProps } from "../types/ApiTypes";
 
 export interface InitialStateProps {
-  areMoviesPresent: null | false | MovieProps;
+  MovieList: undefined | MovieProps[];
 }
 
 const initialState = {
-  areMoviesPresent: null,
+  MovieList: undefined,
 } as InitialStateProps;
 
-export const fetchUser = createSlice({
-  name: "isSignedIn",
+export const fetchMovies = createSlice({
+  name: "MovieList",
 
   initialState,
 
@@ -19,13 +19,12 @@ export const fetchUser = createSlice({
     getMovies: (
       state: InitialStateProps,
 
-      action: PayloadAction<MovieProps | undefined>
+      action: PayloadAction<MovieProps[] | undefined>
     ) => {
-      state.areMoviesPresent = action.payload || false;
+      state.MovieList = action.payload || undefined;
     },
   },
 });
 
 export const { getMovies } = fetchMovies.actions;
-
 export default fetchMovies.reducer;

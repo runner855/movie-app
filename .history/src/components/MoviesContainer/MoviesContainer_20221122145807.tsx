@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 import { MoviesLayout } from "../MoviesLayout/MoviesLayout";
 import { MoviesFilter } from "../MoviesFilter/MoviesFilter";
 import { useAppDispatch, useAppSelector } from "../../hook/Store";
-import { getMovies } from "../../actions/MoviesList";
+import { getMovies } from "../../actions";
+import { useSelector } from "react-redux";
 
 export const MoviesContainer = () => {
   const [value, setValue] = useState<string>("");
@@ -14,7 +15,7 @@ export const MoviesContainer = () => {
   const params = useParams();
   const dispatch = useAppDispatch();
 
-  const movies = useAppSelector((state) => state.movies.MovieList);
+  const moviesData = useSelector((state) => state.counter);
 
   useEffect(() => {
     params.page &&
@@ -24,7 +25,7 @@ export const MoviesContainer = () => {
       ).then((res) => {
         dispatch(getMovies(res.data.results));
       });
-  }, [dispatch, params]);
+  }, [params]);
 
   useEffect(() => {
     const filteredMovies =
@@ -46,3 +47,5 @@ export const MoviesContainer = () => {
     </>
   );
 };
+
+//const count = useAppSelector((state) => state.counter.value)

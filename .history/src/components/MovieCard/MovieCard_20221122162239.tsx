@@ -45,9 +45,7 @@ export const MovieCard = () => {
               <span className="language">
                 {movieDetails.original_language.toUpperCase()}
               </span>
-              <span className="ratings_avg">
-                {averageVote === "0.0" ? "0" : averageVote}
-              </span>
+              <span className="ratings_avg">{}</span>
 
               <div className="Stars"></div>
             </div>

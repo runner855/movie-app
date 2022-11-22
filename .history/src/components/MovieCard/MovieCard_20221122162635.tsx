@@ -46,7 +46,10 @@ export const MovieCard = () => {
                 {movieDetails.original_language.toUpperCase()}
               </span>
               <span className="ratings_avg">
-                {averageVote === "0.0" ? "0" : averageVote}
+                {averageVote === "0.0" &&
+                  (Math.round(movieDetails.vote_average * 100) / 100).toFixed(
+                    0
+                  )}
               </span>
 
               <div className="Stars"></div>

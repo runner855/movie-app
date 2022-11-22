@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import moment from "moment";
 import "./MovieCard.css";
+import { MovieProps } from "../../../.history/src/types/ApiTypes_20221117170811";
 import { useAppDispatch, useAppSelector } from "../../hook/Store";
 import MoviesCall from "../../api/MoviesCall";
 import { getMoviesDetails } from "../../actions/MoviesDetails";
@@ -10,9 +11,7 @@ export const MovieCard = () => {
   const dispatch = useAppDispatch();
   const params = useParams();
 
-  const movieDetails = useAppSelector(
-    (state) => state.moviesDetails.MoviesDetails
-  );
+  const movieDetails = useAppSelector((state) => state.moviesDetails);
 
   useEffect(() => {
     params.id &&
@@ -20,14 +19,9 @@ export const MovieCard = () => {
         `${params.id}?api_key=${process.env.REACT_APP_API_KEY}`,
         {}
       ).then((res) => {
-        console.log("details", res);
-        dispatch(getMoviesDetails(res.data));
+        dispatch(getMoviesDetails(res.data.results));
       });
-  }, [dispatch, params]);
-
-  const averageVote =
-    movieDetails &&
-    (Math.round(movieDetails.vote_average * 100) / 100).toFixed(1);
+  }, [params]);
 
   return (
     <>
@@ -46,7 +40,7 @@ export const MovieCard = () => {
                 {movieDetails.original_language.toUpperCase()}
               </span>
               <span className="ratings_avg">
-                {averageVote === "0.0" ? "0" : averageVote}
+                {(Math.round(movieDetails.vote_average * 100) / 100).toFixed(1)}
               </span>
 
               <div className="Stars"></div>

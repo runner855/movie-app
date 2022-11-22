@@ -24,7 +24,7 @@ export const MoviesContainer = () => {
       ).then((res) => {
         dispatch(getMovies(res.data.results));
       });
-  }, [dispatch, params]);
+  }, [params]);
 
   useEffect(() => {
     const filteredMovies =
@@ -46,3 +46,5 @@ export const MoviesContainer = () => {
     </>
   );
 };
+
+//const count = useAppSelector((state) => state.counter.value)

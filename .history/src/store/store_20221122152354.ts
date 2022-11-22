@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit"; 
 import fetchMovies  from "../actions/MoviesList";
-import fetchMoviesDetails from '../actions/MoviesDetails';
+import fetchMoviesDetails from '../../.history/src/actions/MoviesDetails_20221122152016';
 
 export const store = configureStore({ 
 
