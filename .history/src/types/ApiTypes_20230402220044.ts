@@ -16,7 +16,7 @@ backdrop_path:string;
 
 export enum AppUrls {
   UPCOMING = `/upcoming`,
-  TOP_RATED = "/top_rated",
+  TOP_RATED = "/top rated",
   POPULAR = "popular",
 
 }

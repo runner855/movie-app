@@ -14,7 +14,7 @@ export const MoviesFilter = ({ value, setValue }: MovieFilterProps) => {
         type="search"
         onChange={(e) => setValue(e.target.value)}
         value={value}
-        placeholder="Search Your Movie..."
+        placeholder="Find Your Movie"
       />
     </div>
   );

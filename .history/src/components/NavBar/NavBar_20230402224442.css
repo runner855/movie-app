@@ -45,13 +45,10 @@
 }
 
 .nav-menu {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  list-style: none;
   text-align: left;
-  justify-content: flex-start;
-  margin-right: 2em;
+  list-style: none;
+  font-size: 1.5em;
+  display: flex;
 }
 
 .nav-item {
@@ -72,6 +69,10 @@
 .nav-links:hover {
   color: #f4f6f7;
 }
+
+/* .activated {
+  color: #0473f2;
+} */
 
 .fa-bars {
   color: #000;

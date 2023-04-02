@@ -7,18 +7,13 @@ input {
   border: solid red 0.3em;
   border-radius: 2em;
   background-color: #0000;
-  width: 15em;
+  width: 13em;
   height: 2.2em;
 }
 
 input::placeholder {
   color: red;
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
-input.search-input {
-  padding: 1em;
+  font-size: 1.3em;
 }
 
 input,

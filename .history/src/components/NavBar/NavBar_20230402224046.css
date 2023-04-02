@@ -1,3 +1,41 @@
+/* ul {
+  text-align: left;
+  list-style: none;
+  font-size: 1.5em;
+  display: flex;
+}
+ul li {
+  margin-right: 20px;
+  color: #cc2e25;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.navbar {
+  margin: 2em 0em 0em 2em;
+}
+a:hover {
+  border-bottom: solid 3px #cc2e25;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.navbar {
+  border-bottom: #cc2e25 solid 0.2em;
+} */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +54,7 @@
   top: 0;
   z-index: 999;
   width: 100%;
+  border-bottom: 0.3em solid rgb(236, 6, 6);
 }
 
 .navbar-container {
@@ -46,12 +85,11 @@
 
 .nav-menu {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  text-align: left;
-  justify-content: flex-start;
-  margin-right: 2em;
+  text-align: center;
+  justify-content: flex-end;
 }
 
 .nav-item {
@@ -70,8 +108,12 @@
 }
 
 .nav-links:hover {
-  color: #f4f6f7;
+  color: #0473f2;
 }
+
+/* .activated {
+  color: #0473f2;
+} */
 
 .fa-bars {
   color: #000;
@@ -99,7 +141,7 @@
   }
 
   .nav-menu.active {
-    background: rgb(5, 5, 5);
+    background: rgb(218, 182, 182);
     left: 0;
     opacity: 1;
     transition: all 0.3s ease;
@@ -112,7 +154,7 @@
     padding: 2rem;
     width: 100%;
     display: table;
-    color: rgb(172, 21, 21);
+    color: rgb(6, 6, 6);
   }
 
   .nav-links:hover {

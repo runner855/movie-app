@@ -46,11 +46,11 @@
 
 .nav-menu {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  text-align: left;
-  justify-content: flex-start;
+  text-align: center;
+  justify-content: flex-end;
   margin-right: 2em;
 }
 

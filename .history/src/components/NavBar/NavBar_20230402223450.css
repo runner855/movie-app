@@ -1,3 +1,41 @@
+/* ul {
+  text-align: left;
+  list-style: none;
+  font-size: 1.5em;
+  display: flex;
+}
+ul li {
+  margin-right: 20px;
+  color: #cc2e25;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+.navbar {
+  margin: 2em 0em 0em 2em;
+}
+a:hover {
+  border-bottom: solid 3px #cc2e25;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.navbar {
+  border-bottom: #cc2e25 solid 0.2em;
+} */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +45,7 @@
 .navbar {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +59,7 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
   margin-right: 2em;
 }
 
@@ -46,12 +84,11 @@
 
 .nav-menu {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  text-align: left;
-  justify-content: flex-start;
-  margin-right: 2em;
+  text-align: center;
+  justify-content: flex-end;
 }
 
 .nav-item {
@@ -60,7 +97,7 @@
 }
 
 .nav-links {
-  color: rgb(237, 9, 9);
+  color: #000;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -70,18 +107,21 @@
 }
 
 .nav-links:hover {
-  color: #f4f6f7;
+  color: #0473f2;
 }
+
+/* .activated {
+    color: #0473f2;
+  } */
 
 .fa-bars {
   color: #000;
 }
 
 .menu-icon {
-  display: none;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 760px) {
   .NavbarItems {
     position: relative;
   }
@@ -99,7 +139,7 @@
   }
 
   .nav-menu.active {
-    background: rgb(5, 5, 5);
+    background: whitesmoke;
     left: 0;
     opacity: 1;
     transition: all 0.3s ease;
@@ -112,7 +152,7 @@
     padding: 2rem;
     width: 100%;
     display: table;
-    color: rgb(172, 21, 21);
+    color: black;
   }
 
   .nav-links:hover {
@@ -129,45 +169,25 @@
     width: 100%;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-    height: 2em;
-    width: 100%;
-  }
-
   .menu-icon {
-    display: block;
-    position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+
     font-size: 1.8rem;
     cursor: pointer;
   }
-  .avatar {
-    margin: 1em;
-    height: 3.2em;
-    border-radius: 40px;
-    width: 30%;
+  .arrow-back svg {
+    color: #000 !important;
+    font-size: 1.8rem;
   }
+  /* .navbar {
+    background-color: rgb(184, 230, 224);
+  } */
 }
 
 .menu-icon svg {
-  color: rgb(244, 12, 12) !important;
-}
-
-.avatar {
-  margin: 1em;
-  height: 3.2em;
-  border-radius: 40px;
-  width: 5em;
-}
-
-.avatar:hover {
-  cursor: pointer;
+  color: #000 !important;
+  background-color: ;
 }
 
 .navbar ul {
@@ -176,4 +196,49 @@
   list-style: none;
   margin-top: 1em;
   width: 100%;
+}
+
+.pokemon_logo {
+  height: 4em;
+  display: flex;
+  position: fixed;
+}
+
+.menu-icon {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlM45KDD6bQ7uZdPmIo9ptIspxcKcZ4kcuaA&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.menu_icon_container {
+  height: 20em;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.nav-menu.active {
+  background: transparent;
+  left: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+  z-index: 1;
+  flex-direction: column;
 }
