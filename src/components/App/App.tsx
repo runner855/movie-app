@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { NavBar } from "../NavBar/NavBar";
 
 import { MoviesContainer } from "../MoviesContainer/MoviesContainer";
@@ -8,9 +8,13 @@ import { MoviesContainer } from "../MoviesContainer/MoviesContainer";
 import { MovieCard } from "../MovieCard/MovieCard";
 
 export const App = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="App">
-      <div className="title">Movies App</div>
+      <div className="title" onClick={() => navigate(`/upcoming`)}>
+        Movies App
+      </div>
       <NavBar />
 
       <Routes>

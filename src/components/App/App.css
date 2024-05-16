@@ -5,6 +5,11 @@
   font-size: 3em;
 }
 
+.title:hover {
+  cursor: pointer;
+  color: white;
+}
+
 p {
   color: black;
 }
